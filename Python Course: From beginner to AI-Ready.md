@@ -205,6 +205,14 @@ y: <class 'float'>
 z = 20.6
 z : <class 'float'>
 ```
+### Exercise (Variables and operators):
+- [ ] Write a program to input the **Principal (P)**, **Rate (R)**, and **Time (T)** from the user. Calculate the Simple Interest using the formula `SI = (P * R * T) / 100` .
+- [ ] Input a number and print True if the number is Even, else print False
+- [ ] Input a number. Use the `and` logical operator to print True if the number entered by the user is **divisible by both 3 and 5**
+- [ ] Predict output: 
+`a, b = 10, 2.0
+``c = a * b
+`what is the type of variable "c" and its value
 
 
 
