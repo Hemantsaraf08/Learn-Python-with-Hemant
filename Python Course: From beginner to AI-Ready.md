@@ -160,12 +160,51 @@ Apart from the above operators, its useful to know the below operators:
 2. Exponential operator: **
 3. String Operators: We can use arithmetic operators like + (for concatenation), * (for multiplying the content of a string by an integer)  
 ### Exercise: 
-- [ ] Write a program to input 2 numbers and print the sum
-- [ ] WAP to input side of a square and print its area
-- [ ] WAP to get avg of 2 floating point numbers
-- [ ] WAP to input 2 numbers a and b and print True if a is greater than or equal to b
 - [ ] WAP to input a word and a number (num), then print the word num times
 - [ ] WAP to ask user his first_name and last_name and print his full name
+- [ ] Write a program to input 2 numbers and print the sum (Intro to explicit type conversion)
+- [ ] WAP to input side of a square and print its area 
+- [ ] What will this program print: `﻿print("5" + "5")` 
+- [ ] what wil this program print: `print(int("5") + int("5"))` 
+- [ ] WAP to get avg of 2 floating point numbers
+- [ ] WAP to input 2 numbers a and b and print True if a is greater than or equal to b
+### Type Conversion: 
+- **Implicit type conversion**
+- **Explicit type conversion**
+### Explicit Type Conversion:
+Explicit conversion, also called type casting, is when a programmer manually changes a value from one data type to another.
+
+- Done using Python's build-in function like **int()**, **float()**, **str() and bool()**.
+- Gives full control over how data is interpreted or processed.
+#### Common type casting functions
+- **int() **converts a value to an integer
+- **float()** converts a value to a floating point number
+- **str()** converts a value to a string
+- **bool() **converts a value to a Boolean (True/False)
+### Implicit type conversion:
+Implicit conversion in Python happens automatically when different data types are used together in an expression.
+
+- Python converts a smaller data type to a larger one when needed.
+- Commonly occurs when integers and floats are combined.
+- Conversion happens at runtime to keep results accurate.
+```
+x = 10          # Integer
+y = 10.6        # Float
+z = x + y     
+
+print("x:", type(x))
+print("y:", type(y))
+print("z =", z)
+print("z :", type(z))
+```
+Output: 
+
+```
+x: <class 'int'>
+y: <class 'float'>
+z = 20.6
+z : <class 'float'>
+```
 
 
 
