@@ -156,9 +156,8 @@ Its called Docstring for a specific reason, which we will discover later
 
 Apart from the above operators, its useful to know the below operators: 
 
-1. The modulus operator: %
-2. Exponential operator: **
-3. String Operators: We can use arithmetic operators like + (for concatenation), * (for multiplying the content of a string by an integer)  
+1. Exponential operator: **
+2. String Operators: We can use arithmetic operators like + (for concatenation), * (for multiplying the content of a string by an integer)  
 ### Exercise: 
 - [ ] WAP to input a word and a number (num), then print the word num times
 - [ ] WAP to ask user his first_name and last_name and print his full name
@@ -174,7 +173,7 @@ Apart from the above operators, its useful to know the below operators:
 ### Explicit Type Conversion:
 Explicit conversion, also called type casting, is when a programmer manually changes a value from one data type to another.
 
-- Done using Python's build-in function like **int()**, **float()**, **str() and bool()**.
+- Done using Python's build-in function like **int()**, **float()**, **str() and bool()**. Number 0 will be False and other numbers are True. Empty strings (no ASCII value) are False, others are True 
 - Gives full control over how data is interpreted or processed.
 #### Common type casting functions
 - **int() **converts a value to an integer
@@ -208,11 +207,126 @@ z : <class 'float'>
 ### Exercise (Variables and operators):
 - [ ] Write a program to input the **Principal (P)**, **Rate (R)**, and **Time (T)** from the user. Calculate the Simple Interest using the formula `SI = (P * R * T) / 100` .
 - [ ] Input a number and print True if the number is Even, else print False
-- [ ] Input a number. Use the `and` logical operator to print True if the number entered by the user is **divisible by both 3 and 5**
 - [ ] Predict output: 
 `a, b = 10, 2.0
 ``c = a * b
 `what is the type of variable "c" and its value
+
+
+**Conditional Logic (Making Decisions) **
+
+**What are Conditionals?**
+
+In real life, we make decisions every day:
+
+- **If** it is raining, **then** I will take an umbrella.
+- **Else**, I will wear my favorite sunglasses.
+In programming, **Conditional Statements **allow your code to "think" and perform different actions
+
+based on whether a condition is `True` or `False` 
+
+**The "Questions" (Comparison Operators)**
+
+Before a program can decide, it must compare values. Python uses these symbols to ask questions:
+
+- == : Is equal to? (Don't confuse with `=` , which assigns a value).
+- !=  : Not equal to?.
+- `>`  / `<`  : Greater than / Less than?.
+- >=  / <=  : Greater than or equal to / Less than or equal to?.
+Logical Operators (The "And/Or" Logic):
+
+- `and` : True if **both** conditions are met (e.g., You have a ticket **and** you are on time).
+- `or` : True if **at least one** condition is met (e.g., It is Sunday **or** it is a public holiday).
+- `﻿not` : True if the condition DOESN'T MEET, (e.g: age is not <18, then eligible to vote)
+
+
+**The  if Statement (The Basic Check)**
+
+The `if`  statement is the simplest form of control. If the condition is true, the indented code runs. If it's false, Python simply skips it.
+
+![python-if-statement.png](/.eraser/nCNUkO1k04QolEB0AS51___mlrANIZvmbfebVXPeDhQXqWoD3x1___python-if-statement_fTfaP8oH8S7madNkMgNji.png "python-if-statement.png")
+
+
+
+**Syntax:**
+
+```
+if condition:
+# This code runs only if condition is True, note that 
+```
+**Example:**
+
+```
+age = int(input("Enter your age: "))
+if age >= 18:
+    print("You are eligible for a driving license in India!")
+```
+**The if-else Statement (The "Alternative" Plan)**
+
+When you have two clear paths—one for "Yes" and one for "No"—we use `else`.
+
+![python-if-else-statement.png](/.eraser/nCNUkO1k04QolEB0AS51___mlrANIZvmbfebVXPeDhQXqWoD3x1___python-if-else-statement_ZA489IgQWA_iXjK8lLjZK.png "python-if-else-statement.png")
+
+
+
+**Example (Odd or Even):**
+
+```
+num = int(input("Enter a number: "))
+if num % 2 == 0:
+    print("This number is Even.")
+else:
+    print("This number is Odd.")
+```
+**The if-elif-else Chain (Multiple Choices)**
+
+In many cases, like grading or a menu, there are more than two possibilities. `elif` (short for "else if") allows you to check multiple conditions in order. Python only executes the **first** true branch it finds.
+
+![python-if-elif.png](/.eraser/nCNUkO1k04QolEB0AS51___mlrANIZvmbfebVXPeDhQXqWoD3x1___python-if-elif_r517HaSyFcIxZmeFDx3tS.png "python-if-elif.png")
+
+
+
+**Indian Grading System Example:**
+
+```
+marks = float(input("Enter your marks (0-100): "))
+
+if marks >= 90:
+    grade = "A"
+elif marks >= 80:
+    grade = "B"
+elif marks >= 70:
+    grade = "C"
+else:
+    grade = "D"
+    
+print(f"Your Grade is: {grade}")
+```
+**Crucial Rule: The "Golden Rule of Indentation"**
+
+In Python, the **indentation** (the 4 spaces/tab) at the start of a line is not just for style—it tells Python which statements "belong" to which block
+
+- A header line always ends with a **colon (:)**.
+- The code inside the `if`  or `else`  **must** be shifted to the right
+### Nested conditionals:
+![nested-conditionals.png](/.eraser/nCNUkO1k04QolEB0AS51___mlrANIZvmbfebVXPeDhQXqWoD3x1___nested-conditionals_qE-y9WtqCbuc8MbvmO-gg.png "nested-conditionals.png")
+
+
+
+### Exercise
+1. Input a student's marks. If the marks are 33 or above, print "Congratulations, you passed!"; else, print "Better luck next time!"
+2. WAP Ask the user for a number and check if it is a multiple of 7 or not
+3. Write a program to check if a number entered by the user is positive, negative, or zero.
+4. ** **Movie Ticket Pricing:** **Write a program that asks for age: if Age < 5: Ticket is Free. Age 5-18: Ticket is ₹150. Age > 18: Ticket is ₹250.
+5. WAP to find the greatest of 3 numbers entered by the user. (Using nested conditional and without)
+6. Cricket Score Message: Ask the user to input a batsman's score. If 100 or more: Print "Century!",  If 50-99: Print "Half-Century!", If 0: Print "Duck!". Otherwise: Print "Keep Playing!"
+7. Login System: Create two variables, `username`  and `password` . Ask the user for input. Print "Login Successful" only if **both** match your stored values; otherwise, print "Invalid Credentials."
+8. Input a number. Print "Fizz" if the number is divisible by 3 and Print "Buzz" if the number is divisible by 5 and print "Fizz Buzz" if its divisible by both 3 and 5
+### Short circuit of evaluation
+When Python is processing a logical expression such as `x >= 2 and (x/y) > 2`, it evaluates the expression from **left to right**. Because of the definition of `and`, if `x` is less than 2, the expression `x >= 2` is `False` and so the whole expression is `False` regardless of whether `(x/y) > 2` evaluates to `True` or `False`.  This behaviour is called short-circuiting.
+
+
+
 
 
 
