@@ -19,8 +19,8 @@ Most beginners start their coding journey with Python because it is simple, easy
 - [ ] **Iterative Logic (Part 2):** Use while loops for indefinite tasks and learn to control them with break and continue.
 - [ ] **Weekend Mini Project:** Build a simple "Cricket Scoreboard" or an "INR to USD Currency Converter" using input functions and basic arithmetic operators.
 ### Part 2: Data Structures & Modularity
-- [ ] **Lists: **Dive into Python’s most versatile "storage box." Learn indexing, slicing (accessing parts of a list), and common methods like append() and sort().
-- [ ] **Dictionaries & Tuples: **Store "Key-Value" pairs (like a student’s roll number and name) and learn about Immutability with Tuples.
+- [ ] **Lists:** Dive into Python’s most versatile "storage box." Learn indexing, slicing (accessing parts of a list), and common methods like append() and sort().
+- [ ] **Dictionaries & Tuples:** Store "Key-Value" pairs (like a student’s roll number and name) and learn about Immutability with Tuples.
 - [ ] **Functions (Part 1):** Learn to write reusable "blocks of code" using def, parameters, and return.
 - [ ] **Functions (Part 2):** Understand Local vs. Global scope—where your variables "live" and die.
 - [ ] **Iterative Logic (Part 2):** Use while loops for indefinite tasks and learn to control them with break and continue.
@@ -325,8 +325,69 @@ In Python, the **indentation** (the 4 spaces/tab) at the start of a line is not 
 ### Short circuit of evaluation
 When Python is processing a logical expression such as `x >= 2 and (x/y) > 2`, it evaluates the expression from **left to right**. Because of the definition of `and`, if `x` is less than 2, the expression `x >= 2` is `False` and so the whole expression is `False` regardless of whether `(x/y) > 2` evaluates to `True` or `False`.  This behaviour is called short-circuiting.
 
+### Functions (Intro)
+**What is a Function?**
 
+In programming, a **function **is a named sequence of statements that performs a specific task
 
+**Example: **Imagine you want to make Maggi. Instead of explaining the whole 2-minute process to your brother/sister every single time, you just say, **"Make Maggi."** That single command represents a **whole set of steps** (boil water, add noodles, add masala). In Python, we create these steps once, give them a name, and then just call that name whenever we need it.
+
+**Types of Functions**
+
+1. **Built-in Functions:** These come pre-installed with Python (like the default apps on your phone). Examples: `print()` , `len()` , `type()` , and `range()` .
+2. **User-defined Functions:** These are "Custom Apps" you build yourself using the `def`  keyword
+**How to Build a Function (Syntax)**
+
+To create a function, we use the `def` (definition) keyword:
+
+```
+def greet_student():  # This is the Header
+  # This indented part is the Body
+  print("Namaste! Welcome to the Python Class.")
+```
+- **Header:** Starts with `def` , followed by the function name, parentheses `()` , and a colon `:` .
+    - Note the the function naming rules are similar to variable naming rules, Use snake_case for function naming. Function names are case sensitive, Python treats `my_func()`, `My_Func()`, and `MY_FUNC()` as three entirely different functions.
+
+- **Body:** The actual code that runs, which **must** be indented (usually 4 spaces)
+**Parameters & Arguments (The "Inputs")**
+
+Sometimes a function needs specific information to work.
+
+- **Parameters:** The variable names inside the parentheses in the `def`  line (the placeholders).
+- **Arguments:** The actual values you pass into the function when you call it.
+**Example: The Personal Greeter**
+
+```
+def say_hello(name): # 'name' is the parameter
+    print(f"Hello {name}, kaise ho?")
+say_hello("Aryan") # "Aryan" is the argument
+```
+**The return Statement (The "Output")**
+
+Some functions just perform an action (Void functions), but others give you a result back (Fruitful functions). We use the `return` keyword to send a value back to the caller.
+
+**Indian Context: Currency Converter (USD to INR)**
+
+```
+def convert_to_inr(usd_amount):
+    inr_value = usd_amount * 93.5 # Example exchange rate
+    return inr_value
+
+pocket_money_inr = convert_to_inr(10)
+print(f"Your pocket money in INR is: {pocket_money_inr}")
+```
+**Variable Scope: **
+
+- **Local Scope:** Variables created **inside** a function "live" and "die" there. Other parts of the program cannot see them.
+- **Global Scope:** Variables created **outside** functions are accessible everywhere
+**Why Use Functions?**
+
+1. **Avoid Repetition:** Write once, use 100 times.
+2. **Better Organization:** Makes a long program easier to read and debug.
+3. **Easy Collaboration:** One person can write a function for "Area" while another writes one for "Perimeter," and you can assemble them later
+### Exercise (Functions)
+1. Write a function called `greet()`  that takes a `name`  and a `time_of_day`  (like "Morning" or "Evening") and prints a custom greeting like "Good Morning, Rahul!".
+2. Write a function `circle_area(radius)`  that calculates and returns the area.
 
 
 
