@@ -23,13 +23,12 @@ Most beginners start their coding journey with Python because it is simple, easy
 - [ ] **Dictionaries & Tuples:** Store "Key-Value" pairs (like a student’s roll number and name) and learn about Immutability with Tuples.
 - [ ] **Functions (Part 1):** Learn to write reusable "blocks of code" using def, parameters, and return.
 - [ ] **Functions (Part 2):** Understand Local vs. Global scope—where your variables "live" and die.
-- [ ] **Iterative Logic (Part 2):** Use while loops for indefinite tasks and learn to control them with break and continue.
 - [ ] **Introduction to Modules:** Use Python’s built-in libraries like math for complex calculations and random to build a "Dice Simulator" for board games.
-- [ ] **Weekend Practise: **Practise of Functions and modules in python with real world application examples.
+- [ ] **Weekend Practise**: Practise of Functions and modules in python with real world application examples.
 ### Part 3: Real-World Data (The Bridge to AI)
 - [ ] **Exception Handling:** Make your code "crash-proof" using try and except to handle user errors gracefully.
-- [ ] **File Handling: **Learn how Python reads from and writes to .txt files so your data is saved even after you turn off the computer.
-- [ ] **CSV & Persistence: **Manage data in Excel-like formats using the csv module.
+- [ ] **File Handling:** Learn how Python reads from and writes to .txt files so your data is saved even after you turn off the computer.
+- [ ] **CSV & Persistence:** Manage data in Excel-like formats using the csv module.
 - [ ] **Introduction to NumPy:** Transition from Lists to Arrays. Think of NumPy as "Excel on Steroids" for Python.
 - [ ] **Weekend Mini Project:** 
     - [ ] Build a "Student Record System" that permanently saves names and marks to a file. 
@@ -39,10 +38,9 @@ Most beginners start their coding journey with Python because it is simple, easy
 - [ ] **OOP Basics:** Introduction to Object-Oriented Programming. Learn how to use "Classes" as blueprints to create "Objects".
 - [ ] **OOP Continued...**
 - [ ] **Debugging:** Learn how to read Tracebacks (error messages) and debug your code.
-### Part 5: Capstone Projects 🎓
-- [ ] **Capstone Phase:** Finalize your choice.
-- [ ] **Build project in hackathon mode!**
-- [ ] **Final Demo & Future Path: **Present your project, participate in an **AMA (Ask Me Anything) call** and receive guidance on any topic.
+### Part 5: Ask me Anything session and Intro to python applications 🎓
+- [ ] **FastAPI demo**
+- [ ] **Future Paths**: Participate in an **AMA (Ask Me Anything) call** and receive guidance on any topic.
 ---
 
 ## Part 1: The building blocks
@@ -380,6 +378,66 @@ print(f"Your pocket money in INR is: {pocket_money_inr}")
 
 - **Local Scope:** Variables created **inside** a function "live" and "die" there. Other parts of the program cannot see them.
 - **Global Scope:** Variables created **outside** functions are accessible everywhere
+**Default Parameters**
+
+Python allows you to assign a "fallback" value to a function's parameter in its definition. If a user calls the function but forgets to provide an argument for that specific parameter, Python will automatically use the pre-assigned default value.
+
+This is incredibly useful because it makes your functions more flexible and easier to use.
+
+**The Concept**
+
+When you define a function, you can set a default value in the header.
+
+- **If an argument is passed:** Python uses the value provided by the user.
+- **If no argument is passed:** Python uses the default value you set.
+ -------------------------------------------------------------------------------- 
+
+**Indian Example: The Wedding Invitation Bot**
+
+Imagine you are writing a program to manage dinner preferences for a wedding in Bengaluru. Most guests will prefer a "Veg" meal, so we can set that as the **default**.
+
+```
+def wedding_invite(name, meal_type="Veg"):
+    print(f"Namaste {name}! You are invited to the wedding.")
+    print(f"Your meal preference: {meal_type}")
+
+# 1. Calling the function WITHOUT the second argument
+# Since we didn't specify, it uses the default "Veg"
+wedding_invite("Rahul") 
+
+# 2. Calling the function WITH a specific argument
+# This overrides the default value
+wedding_invite("Aryan", "Non-Veg")
+```
+**Output:**
+
+```
+Namaste Rahul! You are invited to the wedding.
+Your meal preference: Veg
+--------------------
+Namaste Aryan! You are invited to the wedding.
+Your meal preference: Non-Veg
+--------------------
+```
+**Another Example: Cricket Match Settings 🏏**
+
+If you are building a cricket scoreboard app, you might want to default the number of overs to 20 (for T20) unless specified otherwise.
+
+```
+def match_details(team1, team2, overs=20):
+    print(f"Match: {team1} vs {team2}")
+    print(f"Format: {overs} overs")
+
+# Uses default (20 overs)
+match_details("India", "Australia")
+
+# Overrides default for an ODI (50 overs)
+match_details("India", "Pakistan", 50)
+```
+**Important Rule to Remember**
+
+In Python, **default parameters must come at the end **of the parameter list. You cannot have a default parameter followed by a non-default one (e.g., `def func(a=10, b)` will cause a syntax error). 
+
 **Why Use Functions?**
 
 1. **Avoid Repetition:** Write once, use 100 times.
@@ -388,6 +446,31 @@ print(f"Your pocket money in INR is: {pocket_money_inr}")
 ### Exercise (Functions)
 1. Write a function called `greet()`  that takes a `name`  and a `time_of_day`  (like "Morning" or "Evening") and prints a custom greeting like "Good Morning, Rahul!".
 2. Write a function `circle_area(radius)`  that calculates and returns the area.
+### **Iterative Logic (Part 1) — The for Loop & range()**
+#### Why do we need Loops?
+Imagine your teacher asks you to write "I will not talk in class" 100 times in your notebook. It’s boring, tiring, and your hand will hurt! 😫 
+
+Computers, however, are built for **repetitive tasks**. They don't get bored and they never make mistakes while repeating things. In Python, we use **Loops **to tell the computer to perform a set of instructions over and over again.
+
+#### The for Loop (The "Definite" Loop)
+A `for` loop is used when you have a **definite** set of things to go through—like a list of your friends, a string of text, or a specific range of numbers.
+
+**The "Sweets Distribution" Analogy:**
+
+Imagine you have a box of 10 chocolates (a list) and you want to give one to each friend. You go to the first friend, give a chocolate, then the second, then the third, until the box is empty.
+
+- The **box** is your sequence.
+- The **action** (giving chocolate) is the code inside the loop.
+**Syntax:**
+
+```
+for item in sequence:
+# Code to repeat for every item
+```
+- **for** and **in** are Python keywords.
+- **item** is the **iteration variable** that changes its value in every step.
+- Example: for item in [1, 2, 3], here the value of item will change with every loop iteration
+- 
 
 
 
