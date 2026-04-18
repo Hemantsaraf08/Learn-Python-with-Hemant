@@ -508,6 +508,24 @@ We can control the execution of the code inside a loop using the `break` and `co
 1. Your class has roll numbers from 1 to 20. However, roll numbers 5, 12, and 18 are absent today. Write a `for`  loop that prints "Roll number X is present" for everyone **except** those three numbers.
 2.  Create a list of 10 random numbers (e.g., `[14, 25, 7, 49, 64, 81, 100...]` ). Write a loop to search for the number **7**. As soon as the number 7 is found, print "Lucky number found!" and stop the search immediately.
 3. Write a program that calculates the sum of all numbers from 1 to 50, but skip the numbers that are multiples of 5
+#### while loop (intro):
+while loop is used when you don't know how many times you have to iterate, i.e. you don't have a sequence of numbers/strings before hand to use as a loop
+
+- Keeps running as long as a condition is **True**
+- **break**: Used to exit the loop immediately, even if the condition is still true. Useful for "searching" for something and stopping once found.
+- **continue**: Skips the rest of the current iteration and jumps straight back to the top of the loop to start the next one
+**Exercise**
+
+1. Write a program that asks the user to enter their favorite Indian street food items one by one. The loop should run until the user types the word **"Done"**. Once "Done" is entered, the program should stop asking and print "Order finalized!"
+2.  Create a variable `correct_pin = "1234"` . Write an infinite loop that keeps asking the user to "Enter your PIN."
+    - If the user enters the correct PIN, print "Access Granted" and stop.
+    - If they enter the wrong PIN, the loop should continue asking.
+
+3. "Kirana" Bill Generator ==> Use a `while True` loop to repeatedly ask the user to enter the price of an item.
+    - If the user enters `0`  , use the `break`   statement to stop the loop.
+    - Maintain a "Running Total" (accumulator) of all prices entered.
+    - At the end, apply a 5% discount if the total bill is above ₹1000
+
 
 
 
