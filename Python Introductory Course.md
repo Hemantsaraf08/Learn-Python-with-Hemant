@@ -17,9 +17,7 @@ Most beginners start their coding journey with Python because it is simple, easy
 - [ ] **Conditional Logic:** Make your programs "think" using if, elif, and else.
 - [ ] **Iterative Logic (Part 1)**: Master the for loop and the range() function to repeat tasks effortlessly.
 - [ ] **Iterative Logic (Part 2):** Control loops with break and continue, while loop self learning
-### Part 2: Data Structures
-- [ ] **Lists:** Dive into Python’s most versatile "storage box." Learn indexing, slicing (accessing parts of a list), and common methods like append() and sort().
-- [ ] **Dictionaries & Tuples:** Store "Key-Value" pairs (like a student’s roll number and name) and learn about Immutability with Tuples.
+### Part 2: Functions
 - [ ] **Functions (Part 1):** Learn to write reusable "blocks of code" using def, parameters, and return.
 - [ ] **Functions (Part 2):** Understand Local vs. Global scope—where your variables "live" and die.
 ---
@@ -465,7 +463,7 @@ for letter in "oxygen":
 1. You are given a list of numbers. Use a `for`  loop to iterate through this list and print only the numbers that are **multiples of both 3 and 5**
 2. Find palindromes in the list of words: `words = ["anna", "level", "python", "racecar", "cricket"]` . Hint: You can reverse a string using this syntax: word[::-1]
 3. Make a function called even_sum that takes a list of numbers and returns the sum of all even numbers present in that list
-4. Given a list of cricket scores, write a program to find the heighest score
+4. Given a list of cricket scores, write a program to find the highest score
 5. Calculate the value of 2 to the power of 1000. Then, convert this massive number into a **string** and use a `for`  loop to iterate through every digit and calculate their total sum
 6. Ask user to input their name. Use a `for`  loop to iterate through the name and **count how many vowels** (a, e, i, o, u) it contains.
 #### ** **The  range() Function: The sequence or iterator for your for loop
@@ -589,9 +587,12 @@ while loop is used when you don't know how many times you have to iterate, i.e. 
 
 
 ## Further learning roadmap
+### Data structures and Modules
+- [ ] **Lists:** Dive into Python’s most versatile "storage box." Learn indexing, slicing (accessing parts of a list), and common methods like append() and sort().
+- [ ] **Dictionaries & Tuples:** Store "Key-Value" pairs (like a student’s roll number and name) and learn about Immutability with Tuples.
 - [ ] **Introduction to Modules:** Use Python’s built-in libraries like math for complex calculations and random to build a "Dice Simulator" for board games.
 - [ ] **Weekend Practise**: Practise of Functions and modules in python with real world application examples.
-### Part 3: Real-World Data (The Bridge to AI)
+### Part 3: Real-World Data 
 - [ ] **Exception Handling:** Make your code "crash-proof" using try and except to handle user errors gracefully.
 - [ ] **File Handling:** Learn how Python reads from and writes to .txt files so your data is saved even after you turn off the computer.
 - [ ] **CSV & Persistence:** Manage data in Excel-like formats using the csv module.
